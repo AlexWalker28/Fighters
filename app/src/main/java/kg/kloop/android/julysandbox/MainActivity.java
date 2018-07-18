@@ -1,5 +1,6 @@
 package kg.kloop.android.julysandbox;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -67,6 +68,11 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                 }
+
+                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                intent.putExtra("first_player", firstPlayer);
+                intent.putExtra("second_player", secondPlayer);
+                startActivity(intent);
 
             }
         });
