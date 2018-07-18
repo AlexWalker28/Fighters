@@ -14,7 +14,7 @@ public class Fighter {
     public void kick(Fighter fighter) {
         int health = fighter.getHealth();
         double armour = fighter.getArmour();
-        fighter.setHealth(health - (int) (kickPower * armour));
+        fighter.setHealth(health - (int) (kickPower - (kickPower * armour)));
     }
 
     public int getHealth() {
